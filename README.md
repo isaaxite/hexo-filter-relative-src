@@ -15,6 +15,27 @@ npm i hexo-relatived-img --save
 
 Use the markdown notation of the image using the vscode relative path, which will replace the relative path of the directory section when translating hexo.
 
+## file directory
+
+```shell
+|-- license 
+| |-- da68b98e404578126b87c5afd9ba9bc3.png
+|-- license.md  
+```
+
+## Writing in vscode
+
+```markdown
+![常见的开源许可证](./license/da68b98e404578126b87c5afd9ba9bc3.png)
+```
+
+## After being compiled by hexo
+
+```html
+<img src="https://isaaxite.github.io/blog/resources/da68b98e404578126b87c5afd9ba9bc3.png" alt="常见的开源许可证">
+```
+
+`./license/` will be replaced with `''`, and then the markdown image will be handed over to hexo for compilation.
 
 
 # Options
