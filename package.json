@@ -1,0 +1,38 @@
+{
+  "name": "hexo-relatived-img",
+  "version": "1.0.0",
+  "description": "Renders local images of relative paths, compatible with vscode and hexo preview display",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaaxite/hexo-relatived-img.git"
+  },
+  "keywords": [
+    "hexo",
+    "relatived",
+    "path",
+    "image"
+  ],
+  "author": "isaackam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/isaaxite/hexo-relatived-img/issues"
+  },
+  "homepage": "https://github.com/isaaxite/hexo-relatived-img#readme",
+  "dependencies": {
+    "hexo-util": "^3.0.1"
+  }
+}
