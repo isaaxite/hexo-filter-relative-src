@@ -1,5 +1,5 @@
 {
-  "name": "hexo-relatived-img",
+  "name": "hexo-filter-relative-src",
   "version": "1.0.0",
   "description": "Renders local images of relative paths, compatible with vscode and hexo preview display",
   "main": "index",
@@ -18,20 +18,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/isaaxite/hexo-relatived-img.git"
+    "url": "git+https://github.com/isaaxite/hexo-filter-relative-src.git"
   },
   "keywords": [
     "hexo",
-    "relatived",
-    "path",
-    "image"
+    "relative src",
+    "path"
   ],
-  "author": "isaackam",
+  "author": "isaaxite",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/isaaxite/hexo-relatived-img/issues"
+    "url": "https://github.com/isaaxite/hexo-filter-relative-src/issues"
   },
-  "homepage": "https://github.com/isaaxite/hexo-relatived-img#readme",
+  "homepage": "https://github.com/isaaxite/hexo-filter-relative-src#readme",
   "dependencies": {
     "hexo-util": "^3.0.1"
   },

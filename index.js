@@ -8,14 +8,12 @@ const log = require('hexo-log').default({
   silent: false
 });
 
-log.info('Hello HexoRelativedImg!')
+log.info('Hello HexoFilterRelativeSrc!')
 
 hexo.extend.filter.register('marked:renderer', function(renderer) {
   const { relatived_img } = hexo.config;
   const isEnable = typeof relatived_img === 'undefined' ? true : relatived_img;
-  console.info(11111, relatived_img, isEnable)
   if (isEnable) {
-    console.info(1111)
     return filter.call(this, renderer);
   }
   return renderer;
