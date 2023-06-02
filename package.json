@@ -34,5 +34,8 @@
   "homepage": "https://github.com/isaaxite/hexo-relatived-img#readme",
   "dependencies": {
     "hexo-util": "^3.0.1"
+  },
+  "devDependencies": {
+    "hexo-log": "^4.0.1"
   }
 }
