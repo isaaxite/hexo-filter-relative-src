@@ -1,21 +1,34 @@
-# hexo-relatived-img
+# hexo-filter-relative-src
 
-[![LICENSE](https://img.shields.io/bower/l/MI)](https://github.com/isaaxite/hexo-relatived-img/blob/main/LICENSE)
-[![files](https://img.shields.io/github/directory-file-count/isaaxite/hexo-relatived-img)]()
+[![license](https://img.shields.io/bower/l/MI)](https://github.com/isaaxite/hexo-filter-relative-src/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/hexo-filter-relative-src)](https://www.npmjs.com/package/hexo-filter-relative-src)
+![version](https://img.shields.io/github/package-json/v/isaaxite/hexo-filter-relative-src)
+![languages-count](https://img.shields.io/github/languages/count/isaaxite/hexo-filter-relative-src)
+![code-size](https://img.shields.io/github/languages/code-size/isaaxite/hexo-filter-relative-src)
+![last-commit](https://img.shields.io/github/last-commit/isaaxite/hexo-filter-relative-src)
+![commit-activity](https://img.shields.io/github/commit-activity/t/isaaxite/hexo-filter-relative-src)
+![node version](https://img.shields.io/node/v/hexo-filter-relative-src)
 
-Renders local images of relative paths, compatible with vscode and hexo preview display
+Renders local images of relative paths, compatible with vscode and hexo preview display.
+
+**Hint:** You can not only use relative paths but also paths with Hexo syntax.
 
 # Installation
 
 ```shell
-npm i hexo-relatived-img --save
+npm i hexo-filter-relative-src --save
 ```
 
 # Feautres
 
-Use the markdown notation of the image using the vscode relative path, which will replace the relative path of the directory section when translating hexo.
+- relative path: Use the markdown notation of the image using the vscode relative path, which will replace the relative path of the directory section when translating hexo.
 
-## file directory
+- prefix: You can set a global prefix
+
+- Compatible with `hexo-path` syntax
+
+
+## relative path
 
 ```shell
 |-- license 
@@ -26,13 +39,13 @@ Use the markdown notation of the image using the vscode relative path, which wil
 ## Writing in vscode
 
 ```markdown
-![常见的开源许可证](./license/da68b98e404578126b87c5afd9ba9bc3.png)
+![](./license/da68b98e404578126b87c5afd9ba9bc3.png)
 ```
 
 ## After being compiled by hexo
 
 ```html
-<img src="https://isaaxite.github.io/blog/resources/da68b98e404578126b87c5afd9ba9bc3.png" alt="常见的开源许可证">
+<img src="/blog/resources/da68b98e404578126b87c5afd9ba9bc3.png" alt="">
 ```
 
 `./license/` will be replaced with `''`, and then the markdown image will be handed over to hexo for compilation.
@@ -43,12 +56,18 @@ Use the markdown notation of the image using the vscode relative path, which wil
 Add or modify the following section to your root _config.yml file
 
 ```yml
-relatived_img: true
+relitive_src_filter:
+  enable: true
+  # prefix: '/test'
 ```
 
-- relatived_img: Renders local images of relative paths.(default=`true`)
+- **enable**: on or off plugin.
+  - default: ""
+
+- **prefix**: set prefix brefore filename.`prefix: '/test'` => `<img src="/blog/resources//test/da68b98e404578126b87c5afd9ba9bc3.png" alt="">`
+  - detault: ""
 
 
 # Licence
 
-[MIT](https://github.com/isaaxite/hexo-relatived-img/blob/main/LICENSE) @ isaaxite
+[MIT](https://github.com/isaaxite/hexo-filter-relative-src/blob/main/LICENSE) @ isaaxite
