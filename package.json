@@ -1,6 +1,6 @@
 {
   "name": "hexo-filter-relative-src",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Renders local images of relative paths, compatible with vscode and hexo preview display",
   "main": "index",
   "scripts": {
@@ -32,7 +32,8 @@
   },
   "homepage": "https://github.com/isaaxite/hexo-filter-relative-src#readme",
   "dependencies": {
-    "hexo-util": "^3.0.1"
+    "hexo-util": "^3.0.1",
+    "object-assign": "^4.1.1"
   },
   "devDependencies": {
     "hexo-log": "^4.0.1"
