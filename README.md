@@ -64,7 +64,8 @@ relitive_src_filter:
 - **enable**: on or off plugin.
   - default: ""
 
-- **prefix**: set prefix brefore filename.`prefix: '/test'` => `<img src="/blog/resources//test/da68b98e404578126b87c5afd9ba9bc3.png" alt="">`
+- **prefix**: set prefix brefore filename.
+`prefix: '/test'` => `<img src="/blog/resources//test/da68b98e404578126b87c5afd9ba9bc3.png" alt="">`
   - detault: ""
 
 
