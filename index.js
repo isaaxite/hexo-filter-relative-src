@@ -2,18 +2,27 @@
 
 'use strict';
 
+const assign = require('object-assign');
 const filter = require('./lib/filter');
-const log = require('hexo-log').default({
-  debug: false,
-  silent: false
-});
+// const log = require('hexo-log').default({
+//   debug: false,
+//   silent: false
+// });
 
-log.info('Hello HexoFilterRelativeSrc!')
+const DEF_CONF = {
+  enable: true,
+  prefix: ''
+};
+
+const relitive_src_filter = hexo.config.relitive_src_filter || DEF_CONF;
+
+hexo.config.relitive_src_filter = assign({
+  enable: typeof relitive_src_filter.enable === 'undefined' ? true : relitive_src_filter.enable
+}, hexo.config.relitive_src_filter);
 
 hexo.extend.filter.register('marked:renderer', function(renderer) {
-  const { relatived_img } = hexo.config;
-  const isEnable = typeof relatived_img === 'undefined' ? true : relatived_img;
-  if (isEnable) {
+  // log.info('relitive_src_filter conf:', relitive_src_filter);
+  if (relitive_src_filter.enable) {
     return filter.call(this, renderer);
   }
   return renderer;
