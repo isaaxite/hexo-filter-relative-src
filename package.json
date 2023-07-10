@@ -6,11 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "directories": {
-    "lib": "./lib"
-  },
   "files": [
-    "lib",
     "index.js"
   ],
   "engines": {
@@ -32,7 +28,7 @@
   },
   "homepage": "https://github.com/isaaxite/hexo-filter-relative-src#readme",
   "dependencies": {
-    "hexo-util": "^3.0.1",
+    "node-html-parser": "^6.1.5",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
