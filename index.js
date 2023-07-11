@@ -23,7 +23,6 @@ hexo.config.relitive_src_filter = assign({
 }, hexo.config.relitive_src_filter);
 
 hexo.extend.filter.register('after_post_render', function(data) {
-  console.info(relitive_src_filter)
   if (!relitive_src_filter.enable) {
     return data;
   }
